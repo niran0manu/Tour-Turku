@@ -15,3 +15,21 @@ navToggle.addEventListener('click', () =>{
     console.log (visbility);
 
 })
+
+// dark mode button 
+
+const checkbox = document.getElementById('checkbox');
+
+checkbox.addEventListener('change', ()=>{
+  document.body.classList.toggle('dark');
+})
+
+
+// season changes 
+
+
+function swapStyles(sheet){
+    document.getElementById("pagestyle").setAttribute("href", sheet);
+   
+
+}

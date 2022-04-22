@@ -1,11 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap');
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 *{
     margin: 0;padding: 0;
     
     font-family: 'Poppins', sans-serif;
 }
-
+body{
+  transition: background 0.2s linear;
+}
+body.dark {
+  background-color: #292c35;
+}
 /* ======Landing++++ */
 .parallax{
   width: 100%;
@@ -99,11 +109,51 @@ border-radius:3%;
   
 }
 
+/* Season Button  */
+.mode {
+  font-size: 1.5rem;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
+.test3{
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+  list-style-type: none; 
+  cursor: pointer;
+
+}
+@media (max-width: 35em) {
+  .mode {
+    font-size: 1rem;
+  }
+ 
+  .test3{
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    list-style-type: none; 
+  }
+      
+
+}
+
+
+/* end Season Button  */
+
+
 @supports(backdrop-filter:blur(2rem)) {
 
   .primary-navigation{
       /* background:hsl(0 0% 100%/0.1); */
       background-color: crimson;
+      border-top-left-radius:50px;
+      border-bottom-left-radius:50px;
       backdrop-filter: blur(2rem);
       transform: translateX(80%);
   }
@@ -149,18 +199,19 @@ border-radius:3%;
       z-index: 9999;
       background-color: transparent;
       background-image:url(images/menu.svg); /* replac this with url for the icon image  */
-      color:white;
+      color:white;      
       background-repeat: no-repeat;
       border: 0;
       width: 2rem;
       aspect-ratio: 1;
       top: 2rem;
-      right: 2rem;
+      right: 0.5rem;
       
   }
 
   .mobile-nav-toggle[aria-expanded ="true"] {
       background-image: url(images/x.svg);
+      
   }
   .headline {
     font-size: 2.875rem;  
@@ -176,6 +227,51 @@ border-radius:3%;
   
 }
 
+/* Dark mode Button  */
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+  
+}
+
+.label {
+  width: 50px;
+  height: 26px;
+  background-color:#111;
+  display: flex;
+  border-radius:50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  transform: scale(1.5);
+}
+
+.ball {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+/*  target the elemenent after the label*/
+.checkbox:checked + .label .ball{
+  transform: translateX(24px);
+}
+
+.fa-moon {
+  color: pink;
+}
+
+.fa-sun {
+  color: yellow;
+}
+/* darkmode button end */
 
 /* Covid Info */
 .covid-info{
@@ -208,17 +304,12 @@ border-radius:3%;
   width: 80%;
   margin: 5% auto;
   text-align: center;
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem;
+  background: #fff3f3;
 }
 
-.featured.body{
-  width: 100%;
-  max-width: 100vw;
-  /* padding:5rem; */
-  background:url(images/turkumap.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
 
-}
 @media (max-width:  43.75em) {
   .featured.body{
     background:none;
@@ -229,10 +320,9 @@ border-radius:3%;
 /* card conatiner */
 .container{
   max-width: 100rem;
-  margin-inline: auto;    
-  padding-inline: 2rem; 
-  padding-top: 1rem;
-  padding:3rem;
+  margin-inline: auto;        
+  justify-content: space-evenly ; 
+  align-content: center;
 
 
 }
@@ -293,6 +383,7 @@ border-radius:3%;
       aspect-ratio:1/1;
     }
         .card.featured { 
+        
         grid-row: span 2;
         grid-column: span 2;
         
@@ -303,12 +394,21 @@ border-radius:3%;
         aspect-ratio : 1 / 1.25;
         
       }
+      .card.stacked {
+        align-items: center;
+      }
 
       /* enable the featured class to the first card div. */
 }
 
 
 /* test section */
+
+.tour{
+  width: 80%;
+  margin : auto;
+  
+}
 
 .activities{
  text-align: center;
@@ -421,3 +521,50 @@ border-radius:3%;
 
 
 /* neighbouring-locations end */
+
+/* footer */
+footer{
+  background:#fff3f3;
+  padding: 3em 1em;
+  color: black;
+  display: flex;
+  margin-bottom: 0;
+  margin-top: 3em;
+  justify-content: center;
+  gap: 5em;
+}
+
+footer a{
+color: inherit;
+
+}
+
+.footer-nav,
+.footer-social{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+}
+.footer-nav a {
+  padding:0.75em;
+  text-decoration: none;
+
+}
+
+.footer-nav a:hover{
+  text-decoration: underline;
+}
+
+.footer-social{
+  list-style: none;
+
+}
+.some-link{
+  display: inline-block;
+ margin-bottom: 5px;
+}
+.some-icon{
+  width: 30px;
+
+}

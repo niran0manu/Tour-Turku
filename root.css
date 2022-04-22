@@ -1,0 +1,97 @@
+/* =======CSS custom props============ */
+
+:root {
+    --clr-text:#55433B;
+    --clr-primary:#718A6D;
+    --clr-primary-dark:#3a4938;
+    --clr-accent:#8380A2;
+    
+    --ff-title: 'Stick No Bills', sans-serif;
+    --ff-serif: 'Hind Vadodara', sans-serif;
+    --ff-logo: 'Monoton', cursive;
+    
+    }
+    
+    
+    /* ======================= */
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+    }
+    
+    html{
+        box-sizing: border-box;
+        font-family: var(--ff-serif) ;
+        color:var(--clr-text);
+        font-size:1.125rem;
+        background-color: #FFFFF0;
+            
+    }
+    body {
+        margin:0;
+        text-align: center;
+    }
+    
+    img{
+        display: block;
+        max-width: 100%;
+    }
+    
+    section {
+        padding: 3em 1em;
+    }
+    
+    /* Typography */
+    
+    h1,h2,h3,h4,p {
+        margin:0;
+    
+    }
+    
+    h2,h3{
+        font-family:var(--ff-title) ;
+        line-height:0.9;
+        
+    }
+    
+    h2{
+        font-size: 3rem;
+    }
+    
+    p{
+        margin-bottom:0.85em;
+    
+    }
+    
+    p:last-child {
+        margin-bottom: 0;
+    }
+    
+    .section-title-small{
+        font-size: 3rem;
+    }
+    .section-title-small small {
+        font-size: 0.7em;
+        line-height: 1;
+        display:block;
+    }
+    .text-primary{
+        color: var(--clr-primary);
+    }
+    .logo{
+        font-family: var(--ff-logo);
+        text-align: center;
+    
+    }
+    
+    .logo a{
+        text-decoration:none;
+        color:#55433B;
+    
+    }
+    .logo span{
+        color:#718A6D;
+    }
+    
+    
