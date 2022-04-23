@@ -1,4 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+/* =======CSS custom props============ */
+
+:root {
+  --clr-text:White;
+  --clr-strong:crimson;
+  --clr-light:#fff3f3;
+  --clr-accent1:firebrick;
+  
+  --fs-xl: 5.875rem;
+  --fs-l: 2rem;
+  --fs-m: 1.5rem;
+  --fs-s: 1rem;
+  --fs-xs: 0.8rem;
+  
+  --ff-section: 'Saira Stencil One', cursive;
+  --ff-subsection: 'Bungee Shade', cursive;
+  
+  }
+  
+  
+  /* ======================= */
+
+h2{
+  font-family: var(--ff-subsection);
+  font-size: var(--fs-l);
+}
+
+h3{
+  font-family:  var(--ff-section);
+
+}
+
+
+
 
 *,
 *::before,
@@ -6,15 +42,22 @@
   box-sizing: border-box;
 }
 *{
-    margin: 0;padding: 0;
-    
+    margin: 0;padding: 0;    
     font-family: 'Poppins', sans-serif;
 }
+
 body{
   transition: background 0.2s linear;
+  color-scheme: normal;
+  
+  
 }
 body.dark {
-  background-color: #292c35;
+  color-scheme: dark;
+
+  
+  
+  
 }
 /* ======Landing++++ */
 .parallax{
@@ -32,13 +75,12 @@ body.dark {
 }
 
 .headline {
-  font-size: 5.875rem;  
-  color: white;
+  font-size:  5.85rem;
+  color: var(--clr-text);
   position: fixed;
   bottom: 60%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  
+  transform: translate(-50%, -50%);  
   filter: drop-shadow(0 -2mm 1mm rgb(0, 0, 0));
 
 }
@@ -69,7 +111,7 @@ body.dark {
 /* primary header */
 .logo{
 margin: 1rem;
-background-color: crimson;
+background-color: var(--clr-strong);
 padding:1rem;
 border-radius:3%;
 
@@ -103,7 +145,7 @@ border-radius:3%;
   margin: 0;
   
   /* background:hsl(0 0% 0%/0.5); */
-  background-color: crimson;
+  background-color: var(--clr-strong);
   
   
   
@@ -151,7 +193,7 @@ border-radius:3%;
 
   .primary-navigation{
       /* background:hsl(0 0% 100%/0.1); */
-      background-color: crimson;
+      background-color: var(--clr-strong);
       border-top-left-radius:50px;
       border-bottom-left-radius:50px;
       backdrop-filter: blur(2rem);
@@ -168,7 +210,7 @@ border-radius:3%;
 
 .primary-navigation a {
   text-decoration: none;
-  color:white;  
+  color:var(--clr-text);  
   margin-inline-end: 0.75em;
   filter: drop-shadow(0 -1px 1px rgb(0, 0, 0));
   
@@ -199,7 +241,7 @@ border-radius:3%;
       z-index: 9999;
       background-color: transparent;
       background-image:url(images/menu.svg); /* replac this with url for the icon image  */
-      color:white;      
+      color:var(--clr-text);      
       background-repeat: no-repeat;
       border: 0;
       width: 2rem;
@@ -215,7 +257,7 @@ border-radius:3%;
   }
   .headline {
     font-size: 2.875rem;  
-    color: white;
+    color: var(--clr-text);
     position: fixed;
     bottom: 60%;
     left: 50%;
@@ -286,8 +328,8 @@ border-radius:3%;
   margin-bottom: 1em;
   display: inline-block;
   text-decoration: none;
-  background-color: crimson;
-  color:white;
+  background-color:var(--clr-strong) ;
+  color: var(--clr-text);
   border: 1px solid whitesmoke;
   padding: 0.75em 2.125em;
   font-size: 0.813rem;
@@ -306,7 +348,7 @@ border-radius:3%;
   text-align: center;
   padding-top: 3.125rem;
   padding-bottom: 3.125rem;
-  background: #fff3f3;
+  background: var(--clr-light);
 }
 
 
@@ -367,7 +409,7 @@ border-radius:3%;
 .card__title{
   font-size: 1.25rem;
   line-height: 1.1;
-  color: firebrick;
+  color: var(--clr-accent1);
 }
 
 
@@ -424,7 +466,7 @@ border-radius:3%;
 
 .tour-col{
   flex-basis: 31%;
-  background: #fff3f3;
+  background: var(--clr-light);
   border-radius: 10px;
   margin-bottom: 5%;
   padding: 20px 12px;
@@ -449,7 +491,7 @@ border-radius:3%;
   margin: auto;
   text-align: center;
   padding-top: 3.125rem;
-  background: #fff3f3;
+  background: var(--clr-light);
 }
 .nl-row{
   margin-top: 5%;
@@ -497,15 +539,15 @@ border-radius:3%;
 .layer h3{
   width: 100%;
   font-weight: 500;
-  color: whitesmoke;
-  font-size: 1.625rem;
+  color: var(--clr-text);
+  font-size: 1.5rem;
   bottom: 0;
   left: 50%;
   transform:translateX(-50%);
   position: absolute;
   opacity: 0;
   transition: 0.5s;
-  background: firebrick;
+  background: var(--clr-accent1);
  
 }
 
@@ -524,7 +566,7 @@ border-radius:3%;
 
 /* footer */
 footer{
-  background:#fff3f3;
+  background:var(--clr-light);
   padding: 3em 1em;
   color: black;
   display: flex;

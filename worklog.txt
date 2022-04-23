@@ -1,2 +1,50 @@
 Start working on the other stylesheets.
 And do the dark mode animation.
+
+root vars :
+
+bg--strong 
+bg-- light 
+bg-- pop
+bg-- pop2
+
+text-- dark.
+text-- light,(add this only in darkmode)
+
+
+fonts:
+fs--5 :5.875rem;
+fs--1.5: 1.5rem;
+fs--1: 1rem;
+fs--2: 2.875rem;
+fs--.8:0.813rem;
+fs--1.25rem
+
+
+
+/* =======CSS custom props============ */
+
+:root {
+--clr-text:black;
+--clr-strong:crimson; var(--clr-accent1);
+--clr-light:#fff3f3;
+--clr-accent1:firebrick
+
+--fs-5: 5.875rem;
+--fs-2: 2rem;
+--fs-1.5: 1.5rem;
+--fs-1: 1rem;
+--fs-08: 0.8rem;
+
+--ff-section: 'Saira Stencil One', cursive;
+
+}
+
+
+/* ======================= */
+
+section is h2
+boxed is h3 
+
+--img-parallax-main: url(images/turku-ilmasta-kuva-seilo-ristimaki.jpg);
+--img-parallax-mask: url(images/towardstuomio.png);
