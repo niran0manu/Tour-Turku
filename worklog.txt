@@ -22,7 +22,7 @@ fs--1.25rem
 
 
 
-/* =======CSS custom props============ */
+/* =======CScustom props============ */
 
 :root {
 --clr-text:black;
