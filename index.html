@@ -4,225 +4,262 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link id ="pagestyle" rel="stylesheet" href="styles.css">
-    <title>Tour Turku</title>
-    <script src="nav.js" defer ></script>
+    <link id="pagestyle" rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Turku Tours - Experience Finland in All Seasons</title>
+    <meta name="description" content="Discover Turku, Finland's oldest city, with seasonal tours and activities for all travelers.">
+    <script src="main.js" defer></script>
 </head>
 <body>
-
-
-  <header >   
-      <div class=" primary-header flex ">
-    <div>
-         <img class="logo"src="./images/logo-kissmyturku.svg" alt="Logo">
-         <div class="seasons">
-          <ul class="test3">
-              <li ><button class="summer mode" onclick="swapStyles('styles.css')">☀️</button></li>
-              <li ><button class="fall mode" onclick="swapStyles('fall.css')">🍂</button></li>                
-              <li><button class="winter mode" onclick="swapStyles('winter.css')">❄️</button></li>
-              <li><button class="spring mode" onclick="swapStyles('spring.css')">🌸</button></li>           
-          </ul>
-      </div>
-    </div>
-    <button class="mobile-nav-toggle" aria-controls ="primary-navigation" aria-expanded="false">
-        <span class= "sr-only"></span>
-    </button>
-    <nav>
-        <ul id="primary-navigation" data-visible="false" class=" primary-navigation flex">
-          
-          <li>
-            <input disabled="true" type="checkbox" class="checkbox" id="checkbox">
-            <label for="checkbox" class="label">
-              <i class="fas fa-moon"></i>
-              <i class='fas fa-sun'></i>
-              <div class='ball'>
-            </label>
-          </li>
-          <!-- nav -->
-          <li>
-                <a href=""> Home </a>
-            </li>
+  <header>
+    <div class="primary-header">
+        <div class="logo-seasons-container">
+            <div class="logo-container">
+                <img class="logo" src="./images/logo-kissmyturku.svg" alt="Turku Tours Logo">
+            </div>
             
-            <li>
-                <a href=""> Services </a>
-            </li>
-            <li>
-                <a href=""> Contact </a>
-            </li>            
-        </ul>
-
-    </nav>
-  </div> <!--  primary-header div -->
- 
-
-    <!-- Nav-container end -->
-
-<!--Landing image  -->
-    <div class="parallax">
-      <div class="mask">
-        <span class="headline">Turku Tour</span>
-      </div>            
+            <!-- Add seasons switcher between logo and hamburger menu for mobile -->
+            <div class="seasons-mobile">
+                <div class="seasons-container-mobile">
+                    <button class="summer mode-mobile active" aria-label="Summer Theme" onclick="setActiveSeason('summer'); swapStyles('styles.css')">☀️</button>
+                    <button class="fall mode-mobile" aria-label="Fall Theme" onclick="setActiveSeason('fall'); swapStyles('fall.css')">🍂</button>
+                    <button class="winter mode-mobile" aria-label="Winter Theme" onclick="setActiveSeason('winter'); swapStyles('winter.css')">❄️</button>
+                    <button class="spring mode-mobile" aria-label="Spring Theme" onclick="setActiveSeason('spring'); swapStyles('spring.css')">🌸</button>
+                </div>
+            </div>
+        </div>
+        
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="sr-only">Menu</span>
+        </button>
+        
+        <nav>
+            <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#featured">Attractions</a>
+                </li>
+                <li>
+                    <a href="#tours">Tours</a>
+                </li>
+                <li>
+                    <a href="#nearby">Nearby</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+                
+                <!-- Keep the original seasons for desktop view -->
+                <li class="seasons">
+                    <span class="seasons-label">Seasons:</span>
+                    <div class="seasons-container">
+                        <button class="summer mode active" aria-label="Summer Theme" onclick="setActiveSeason('summer'); swapStyles('styles.css')">☀️</button>
+                        <button class="fall mode" aria-label="Fall Theme" onclick="setActiveSeason('fall'); swapStyles('fall.css')">🍂</button>
+                        <button class="winter mode" aria-label="Winter Theme" onclick="setActiveSeason('winter'); swapStyles('winter.css')">❄️</button>
+                        <button class="spring mode" aria-label="Spring Theme" onclick="setActiveSeason('spring'); swapStyles('spring.css')">🌸</button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
     </div>
-<!--Landing image close  -->    
+
+    <!-- Landing image with parallax effect -->
+   <!-- Desktop Parallax (existing) -->
+<div id="home" class="parallax desktop-parallax">
+  <div class="mask">
+      <h1 class="headline">Experience Turku<br><span class="headline-subtitle">In Every Season</span></h1>
+  </div>
+</div>
+
+<!-- Mobile-only Parallax (new) -->
+<div id="home-mobile" class="parallax mobile-parallax" aria-label="Turku city view"></div>  <div class="mask-mobile">
+      <h1 class="headline-mobile">Experience Turku<br><span class="headline-subtitle">In Every Season</span></h1>
+  </div>
+</div>
 </header>
+    <main>
+        <!-- Alert/Info Section -->
+        <section class="section">
+            <div class="alert-banner">
+                <div class="alert-icon">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="alert-content">
+                    <h3 class="alert-title">Travel Updates</h3>
+                    <p>Important information about activities and safety guidelines for visitors.</p>
+                    <button class="btn">Learn More</button>
+                </div>
+            </div>
+        </section>
 
+        <!-- Featured Attractions -->
+        <section id="featured" class="section">
+            <div class="section-title">
+                <h2>Discover Turku's Highlights</h2>
+                <p class="section-subtitle">Explore the best attractions our historic city has to offer</p>
+            </div>
+            
+            <div class="card-container">
+                <div class="card">
+                    <div class="card__img-container">
+                        <img src="https://images.unsplash.com/photo-1601567900444-53ad0c05c791" alt="Turku Cathedral" class="card__img">
+                    </div>
+                    <div class="card__content">
+                        <h3 class="card__title">Turku Cathedral</h3>
+                        <p class="card__info">Finland's most important historical monument and religious center dating back to the 13th century.</p>
+                        <button type="button" class="btn">Read more</button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card__img-container">
+                        <img src="https://images.unsplash.com/photo-1564676217769-5bf29c781ffb" alt="Turku Castle" class="card__img">
+                    </div>
+                    <div class="card__content">
+                        <h3 class="card__title">Turku Castle</h3>
+                        <p class="card__info">A medieval fortress and palace with over 700 years of history and a fascinating museum inside.</p>
+                        <button type="button" class="btn">Read more</button>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card__img-container">
+                        <img src="https://images.unsplash.com/photo-1620552445202-4b78a17d5858" alt="Aura River" class="card__img">
+                    </div>
+                    <div class="card__content">
+                        <h3 class="card__title">Aura River</h3>
+                        <p class="card__info">The heart of Turku with restaurant boats, museums, and a beautiful riverside atmosphere.</p>
+                        <button type="button" class="btn">Read more</button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<main>
-  <section>
-    <div class="covid-info">
-      <h2>Travel updates during  Covid19</h2>
-      <p>Important update about activities in Turku during the pandemic</p>
-      <a class="info-btn"> Read More </a>   
-    
+        <!-- Tour Options -->
+        <section id="tours" class="tour-section">
+            <div class="section">
+                <div class="section-title">
+                    <h2>Guided Tours</h2>
+                    <p class="section-subtitle">Discover Turku with our expert local guides across all seasons</p>
+                </div>
+                
+                <div class="tour-grid">
+                    <div class="tour-item">
+                        <h3>Culinary Tour</h3>
+                        <p>Experience the best of Finnish cuisine with our food tour through Turku's markets, restaurants, and cafés. Sample local delicacies and learn about Finnish food traditions.</p>
+                        <button type="button" class="btn">Book Now</button>
+                    </div>
+                    
+                    <div class="tour-item">
+                        <h3>Cultural Tour</h3>
+                        <p>Explore Turku's rich history and vibrant arts scene. Visit museums, galleries, and historical sites with knowledgeable guides who bring the city's stories to life.</p>
+                        <button type="button" class="btn">Book Now</button>
+                    </div>
+                    
+                    <div class="tour-item">
+                        <h3>Archipelago Tour</h3>
+                        <p>Discover the stunning Turku Archipelago with over 20,000 islands. Enjoy boat rides, island hopping, and the breathtaking natural scenery of this unique environment.</p>
+                        <button type="button" class="btn">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      </div>     
-    </div>
+        <!-- Nearby Destinations -->
+        <section id="nearby" class="section">
+            <div class="section-title">
+                <h2>Nearby Attractions</h2>
+                <p class="section-subtitle">Make the most of your visit with these popular day trips from Turku</p>
+            </div>
+            
+            <div class="location-grid">
+                <div class="location-card">
+                    <img src="./images/Muumin.jpg" alt="Moominworld Theme Park">
+                    <div class="location-overlay">
+                        <h3 class="location-title">Moominworld</h3>
+                        <p class="location-description">A theme park based on the beloved Moomin characters, located on the island of Kailo near Naantali.</p>
+                        <button class="btn btn-outline">Explore</button>
+                    </div>
+                </div>
+                
+                <div class="location-card">
+                    <img src="./images/cruise.jpg" alt="Viking Line Cruise Ship">
+                    <div class="location-overlay">
+                        <h3 class="location-title">Cruise Trip</h3>
+                        <p class="location-description">Take a day cruise to Stockholm, Åland Islands, or around the beautiful Turku Archipelago.</p>
+                        <button class="btn btn-outline">Explore</button>
+                    </div>
+                </div>
+                
+                <div class="location-card">
+                    <img src="./images/sea.jpg" alt="Archipelago Sea View">
+                    <div class="location-overlay">
+                        <h3 class="location-title">Archipelago National Park</h3>
+                        <p class="location-description">Experience the unique landscape of Finland's southwestern archipelago with its thousands of islands.</p>
+                        <button class="btn btn-outline">Explore</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  </section>
-
-  <section class="featured">
-    <div>
-      <h2>Wanna see whats Hot here? </h2>
-      <p>Its all the covid patients </p>
-      <div class="featured body">
-        <div class="container">
-          <div class="product-grid">
-            <div class="card stacked ">
-              <img src="https://image.freepik.com/free-photo/female-tourists-hand-have-happy-travel-map_1150-7411.jpg" alt="" class="card__img">
-              <div class="card__content">
-              <h3 class="card__title">Aalto Night club</h3>
-              <p class="card__info">Loremlfhals askldjfl;k sfadklfjasl</p>              
-              <button type="button" class="info-btn"> Read more</button>
-               </div>
-              </div>
-              <div class="card stacked">
-              <img src="https://image.freepik.com/free-photo/female-tourists-hand-have-happy-travel-map_1150-7411.jpg" alt="" class="card__img">
-              <div class="card__content">
-              <h3 class="card__title">Aalto Night club</h3>
-              <p class="card__info">Loremlfhals askldjfl;k sfadklfjasl</p>
-              <button type="button" class="info-btn"> Read more</button>
-              </div>
-              </div>
-              <div class="card stacked">
-              <img src="https://image.freepik.com/free-photo/female-tourists-hand-have-happy-travel-map_1150-7411.jpg" alt="" class="card__img">
-              <div class="card__content">
-              <h3 class="card__title">Aalto Night club</h3>
-              <p class="card__info">Loremlfhals askldjfl;k sfadklfjasl</p>
-              <button type="button" class="info-btn"> Read more</button>
-              </div> 
-              </div>
-              
-  
-          </div>  
-  
-  
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4 class="footer-heading">Turku Tours</h4>
+                <p>Offering the best guided experiences of Turku and the surrounding region in all four beautiful Finnish seasons.</p>
+            </div>
+            
+            <div class="footer-column">
+                <h4 class="footer-heading">Navigation</h4>
+                <ul class="footer-nav">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#featured">Attractions</a></li>
+                    <li><a href="#tours">Tours</a></li>
+                    <li><a href="#nearby">Nearby</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4 class="footer-heading">Contact Us</h4>
+                <p>Turku Tourist Office<br>
+                Aurakatu 4, 20100 Turku<br>
+                +358 2 262 7444<br>
+                info@turkutours.fi</p>
+            </div>
+            
+            <div class="footer-column">
+                <h4 class="footer-heading">Follow Us</h4>
+                <ul class="footer-social">
+                    <li>
+                        <a href="#" class="footer-social-icon">
+                            <img class="some-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/1024px-Facebook_icon_2013.svg.png" alt="Facebook">
+                            <span>Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-social-icon">
+                            <img class="some-icon" src="https://raw.githubusercontent.com/niran0manu/Forest-to-Freezer/master/images/insta.png" alt="Instagram">
+                            <span>Instagram</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer-social-icon">
+                            <i class="fab fa-twitter some-icon"></i>
+                            <span>Twitter</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
         
-
-      </div>
-
-    </div>
-  </section>
-<!-- test sesction -->
-  <section class="tour">
-    <div class ="activities">
-      <h2>Try our Tours</h2>
-      <p>Check them out down below</p>
-    </div>
-    
-
-    <div class="row">
-      <div class="tour-col">
-        <h3>Culinary Tour </h3>
-        <p> dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet  </p> 
-        <button type="button" class="info-btn"> Read more</button>      
-      </div>    <!--"tour-col -->
-
-      <div class="tour-col">
-        <h3>Cultural Tour </h3>
-        <p> lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet  </p>    
-        <button type="button" class="info-btn"> Read more</button>      
-      </div>    <!--"tour-col -->
-
-      <div class="tour-col">
-        <h3>Archipelago Tour </h3>
-        <p> lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet  </p> 
-        <button type="button" class="info-btn"> Read more</button>         
-      </div>    <!--"tour-col -->
-    
-    </div><!-- row -->
-  </section>
-
-
-  <!-- section 3  -->
-
-  <section class="neighbouring-locations">
-
-    <h1> What to do here?</h1>
-    <p>What ever you want.</p>
-
-    <div class="nl-row">
-      <div class="nl-col">
-        <img src="./images/Muumin.jpg" alt="muuminmaailma kuva">
-        <div class="layer">
-          <h3> Muuminmaailma </h3>          
+        <div class="copyright">
+            <p>&copy; 2025 Turku Tours. All rights reserved.</p>
         </div>
-        
-      </div>
-
-      <div class="nl-col">
-        <img src="./images/cruise.jpg" alt="Crusie">
-        <div class="layer">
-          <h3> Crusie Trip</h3>
-        </div>
-      </div>
-
-      <div class="nl-col">
-        <img src="./images/sea.jpg" alt="Sea">
-        <div class="layer">
-          <h3> See the Sea </h3>
-        </div>
-      </div>
-
-    </div><!-- nl-row -->
-
-  </section>
-
-  
-
-</main>
-
-<footer>
-  <ul class="footer-nav">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Our partners</a></li>
-      
-      
-  </ul>
-
-  <ul class="footer-social">
-      <li><a class="some-link" href=""><img class="some-icon"src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/1024px-Facebook_icon_2013.svg.png" alt="" aria-label="Meta"></a></li>
-      <li><a class="some-link" href=""><img class="some-icon"src="https://raw.githubusercontent.com/niran0manu/Forest-to-Freezer/master/images/insta.png" alt="" aria-label="Instagram"></a></li>
-      
-    
-  </ul>
-</footer>
-
-
-
-
-
-
-
-
-
-
-
-    
+    </footer>
 </body>
 </html>
-
-
-

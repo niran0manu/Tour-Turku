@@ -1,64 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
-/* =======CSS custom props============ */
+/* Winter Theme */
+@import url('base.css');
 
 :root {
-  --clr-text:White;
-  --clr-strong:#069db5;
-  --clr-light:#e6fbfe;
-  --clr-accent1:#046b7b;
+  /* Winter color scheme */
+  --clr-text: #ffffff;
+  --clr-strong: #069db5;
+  --clr-light: #e6fbfe;
+  --clr-accent1: #046b7b;
   
-  --fs-xl: 5.875rem;
-  --fs-l: 2rem;
-  --fs-m: 1.5rem;
-  --fs-s: 1rem;
-  --fs-xs: 0.8rem;
-  
-  --ff-section: 'Saira Stencil One', cursive;
-  --ff-subsection: 'Bungee Shade', cursive;
-  
-  }
-  
-  
-  /* ======================= */
-
-h2{
-  font-family: var(--ff-subsection);
-  font-size: var(--fs-l);
+  /* Winter-specific variables */
+  --winter-gradient: linear-gradient(135deg, rgba(6, 157, 181, 0.85), rgba(41, 128, 185, 0.85));
 }
 
-h3{
-  font-family:  var(--ff-section);
-
-}
-
-
-
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-*{
-    margin: 0;padding: 0;    
-    font-family: 'Poppins', sans-serif;
-}
-
-body{
-  transition: background 0.2s linear;
-  color-scheme: normal;
-  
-  
-}
-body.dark {
-  color-scheme: dark;
-
-  
-  
-  
-}
+/* Override background image for parallax section */
 /* ======Landing++++ */
 .parallax{
   width: 100%;
@@ -78,7 +32,7 @@ body.dark {
   font-size:  5.85rem;
   color: var(--clr-text);
   position: fixed;
-  bottom: 60%;
+  bottom: 10%;
   left: 50%;
   transform: translate(-50%, -50%);  
   filter: drop-shadow(0 -2mm 1mm rgb(0, 0, 0));
@@ -95,518 +49,137 @@ body.dark {
   
 
 }
-/* ======Landing++++End  */
 
-
-
-
-
-.flex{
-  display: flex;
-  gap:var(--gap, 4em);
-
-}
-
-
-/* primary header */
-.logo{
-margin: 1rem;
-background-color: var(--clr-strong);
-padding:1rem;
-border-radius:3%;
-
-}
-@media (max-width:  43.75em) {
-  .logo{
-    display:none;
-  }
-  
-}
-
-
-.primary-header{
-  
-  align-items: center;
-  justify-content: space-between;
-  padding: 0;
-  width: 100%;
-  position:fixed;
-  z-index: 1
-  
-}
-.mobile-nav-toggle{
-  display: none;
-}
-
-
-.primary-navigation {
-  list-style: none;
-  padding: 1em;
-  margin: 0;
-  
-  /* background:hsl(0 0% 0%/0.5); */
+/* Winter-specific button styles */
+.btn {
   background-color: var(--clr-strong);
-  
-  
-  
+  border-radius: 50px;
 }
 
-/* Season Button  */
-.mode {
-  font-size: 1.5rem;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-  outline: none;
+.btn:hover {
+  background-color: var(--clr-accent1);
+  box-shadow: 0 0 15px rgba(6, 157, 181, 0.4);
 }
 
-.test3{
-  display: flex;
-  flex-direction: row;
-  margin: 1rem;
-  list-style-type: none; 
-  cursor: pointer;
-
-}
-@media (max-width: 35em) {
-  .mode {
-    font-size: 1rem;
-  }
- 
-  .test3{
-    display: flex;
-    flex-direction: column;
-    margin: 0.5rem;
-    list-style-type: none; 
-  }
-      
-
-}
-
-
-/* end Season Button  */
-
-
-@supports(backdrop-filter:blur(2rem)) {
-
-  .primary-navigation{
-      /* background:hsl(0 0% 100%/0.1); */
-      background-color: var(--clr-strong);
-      border-top-left-radius:50px;
-      border-bottom-left-radius:50px;
-      backdrop-filter: blur(2rem);
-      transform: translateX(80%);
-  }
-  nav:hover {   
-    filter: drop-shadow(0 0 0.75rem grey);
-    transform: translateX(-80%);
-    transition: transform 500ms ease-out;
-    
-}
-
-}
-
-.primary-navigation a {
-  text-decoration: none;
-  color:var(--clr-text);  
-  margin-inline-end: 0.75em;
-  filter: drop-shadow(0 -1px 1px rgb(0, 0, 0));
-  
-}
-
-
-@media (max-width: 35em) {
-  .primary-navigation{
-      --gap:2em;
-      position: fixed;
-      z-index: 1000;
-      inset:0 0 0 30%;
-      flex-direction: column;
-      padding: min(30vh,10rem) 2em ;
-      transform: translateX(100%);
-      transition: transform 350ms ease-in-out;
-      
-
-  }
-
-  .primary-navigation[data-visible ="true"]{
-      transform:translateX(0%)
-  }
-  
-  .mobile-nav-toggle{
-      display: block;
-      position:absolute;
-      z-index: 9999;
-      background-color: transparent;
-      background-image:url(images/menu.svg); /* replac this with url for the icon image  */
-      color:var(--clr-text);      
-      background-repeat: no-repeat;
-      border: 0;
-      width: 2rem;
-      aspect-ratio: 1;
-      top: 2rem;
-      right: 0.5rem;
-      
-  }
-
-  .mobile-nav-toggle[aria-expanded ="true"] {
-      background-image: url(images/x.svg);
-      
-  }
-  .headline {
-    font-size: 2.875rem;  
-    color: var(--clr-text);
-    position: fixed;
-    bottom: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;    
-    filter: drop-shadow(0 -2mm 1mm rgb(0, 0, 0));
-  
-  }
-  
-}
-
-/* Dark mode Button  */
-
-.checkbox {
-  opacity: 0;
-  position: absolute;
-  
-}
-
-.label {
-  width: 50px;
-  height: 26px;
-  background-color:#111;
-  display: flex;
-  border-radius:50px;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5px;
-  position: relative;
-  transform: scale(1.5);
-}
-
-.ball {
-  width: 20px;
-  height: 20px;
-  background-color: white;
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  border-radius: 50%;
-  transition: transform 0.2s linear;
-}
-
-/*  target the elemenent after the label*/
-.checkbox:checked + .label .ball{
-  transform: translateX(24px);
-}
-
-.fa-moon {
-  color: pink;
-}
-
-.fa-sun {
-  color: yellow;
-}
-/* darkmode button end */
-
-/* Covid Info */
-.covid-info{
-  width: 80%;
-  margin: 5% auto;
-  text-align: center;
-  background: lightgrey;
-}
-
-.info-btn{
-  margin-top: 1em;
-  margin-bottom: 1em;
-  display: inline-block;
-  text-decoration: none;
-  background-color:var(--clr-strong) ;
-  color: var(--clr-text);
-  border: 1px solid whitesmoke;
-  padding: 0.75em 2.125em;
-  font-size: 0.813rem;
-  border-radius: 3px;
-  position: relative;
-  cursor: pointer;
-
-}
-
-/* Covid Info End ================ */
-
-/* Section  */
-.featured{
-  width: 80%;
-  margin: 5% auto;
-  text-align: center;
-  padding-top: 3.125rem;
-  padding-bottom: 3.125rem;
-  background: var(--clr-light);
-}
-
-
-@media (max-width:  43.75em) {
-  .featured.body{
-    background:none;
-  }
-  
-}
-
-/* card conatiner */
-.container{
-  max-width: 100rem;
-  margin-inline: auto;        
-  justify-content: space-evenly ; 
-  align-content: center;
-
-
-}
-
-.stacked{
-  display: grid;
-  background-color: whitesmoke;
-  
-  
-}
-
-.stacked > *{
-  grid-column: 1/2 ;
-  grid-row: 1/2 ;
-}
-
-
-.product-grid{
-  display: grid;
-  gap: .25rem;
-  grid-template-columns: 
-    repeat(auto-fit, minmax(15rem, 1fr)) ;
-  
-}
-
+/* Winter-specific card styling */
 .card {
-  aspect-ratio: 1/ 1.5;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
- 
+  border-radius: var(--border-radius-large);
+  border: 1px solid rgba(6, 157, 181, 0.1);
+  box-shadow: 0 5px 20px rgba(6, 157, 181, 0.1);
 }
 
-.card__content{
-  /* z-index:1; */
-  
-  align-self: end;
-  margin: 0.5rem 0.5rem 2rem ;
-  padding: 0.5rem;
-  border-radius: 3px;
-  
+.card__img-container {
+  border-top-left-radius: var(--border-radius-large);
+  border-top-right-radius: var(--border-radius-large);
 }
 
-.card__title{
-  font-size: 1.25rem;
-  line-height: 1.1;
+.card__title {
   color: var(--clr-accent1);
 }
 
-
-
-.card__img {
-  width: 100%;
-  aspect-ratio: 1 / 1.25;
-  object-fit: cover;
+.tour-item {
+  border-radius: var(--border-radius-large);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(to bottom right, white, var(--clr-light));
 }
 
-@media (min-width: 60em){
-    .card__img{
-      aspect-ratio:1/1;
-    }
-        .card.featured { 
-        
-        grid-row: span 2;
-        grid-column: span 2;
-        
-      }
-     
-
-      .card.featured .card__img {
-        aspect-ratio : 1 / 1.25;
-        
-      }
-      .card.stacked {
-        align-items: center;
-      }
-
-      /* enable the featured class to the first card div. */
-}
-
-
-/* test section */
-
-.tour{
-  width: 80%;
-  margin : auto;
-  
-}
-
-.activities{
- text-align: center;
- 
-}
-.row{
-  margin-top: 5%;
-  display: flex;
-  justify-content: space-evenly ;
-  text-align:center;
-}
-
-
-.tour-col{
-  flex-basis: 31%;
-  background: var(--clr-light);
-  border-radius: 10px;
-  margin-bottom: 5%;
-  padding: 20px 12px;
-  box-sizing: border-box;
-  
-
-}
-
-@media (max-width:  43.75em) {
-  .row{
-    flex-direction:column;
-  }
-  
-}
-
-
-/* testsection end */
-
-/* neighbouring-locations */
-.neighbouring-locations {
-  width: 80%;
-  margin: auto;
-  text-align: center;
-  padding-top: 3.125rem;
-  background: var(--clr-light);
-}
-.nl-row{
-  margin-top: 5%;
-  display: flex;
-  justify-content: space-evenly ;
-  text-align:center;
-}
-@media (max-width:  43.75em) {
-  .nl-row{
-    flex-direction:column;
-  }
-  
-}
-
-.nl-col{
-  flex-basis:32%;
-  border-radius: 3px;
-  margin-bottom: 30px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
-
-.nl-col img {
- width: 100%;
- display: block;
- 
-}
-
-.layer{
-  background: transparent;
-  height: 100%;
-  width: 100%;
-  position:absolute;
+/* Add frost effect to cards on hover */
+.card:hover::before {
+  content: '';
+  position: absolute;
   top: 0;
   left: 0;
-  transition: 0.5s;
-
-}
-
-.layer :hover{
-  background: rgba(226,0,0,0.7);
-}
-
-.layer h3{
-  width: 100%;
-  font-weight: 500;
-  color: var(--clr-text);
-  font-size: 1.5rem;
+  right: 0;
   bottom: 0;
-  left: 50%;
-  transform:translateX(-50%);
-  position: absolute;
-  opacity: 0;
-  transition: 0.5s;
-  background: var(--clr-accent1);
- 
+  background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 50%);
+  border-radius: var(--border-radius-large);
+  pointer-events: none;
+  z-index: 2;
 }
 
-.layer:hover h3{
-  bottom: 49%;
-  opacity: 1;
+/* Custom styling for alert banner in winter theme */
+.alert-banner {
+  background-color: #f0f8ff;
+  border-left-color: var(--clr-strong);
+  border-radius: var(--border-radius-large);
 }
 
-
-
-
-
-
-
-/* neighbouring-locations end */
-
-/* footer */
-footer{
-  background:var(--clr-light);
-  padding: 3em 1em;
-  color: black;
-  display: flex;
-  margin-bottom: 0;
-  margin-top: 3em;
-  justify-content: center;
-  gap: 5em;
+.alert-icon {
+  color: var(--clr-strong);
 }
 
-footer a{
-color: inherit;
-
+/* Winter-specific section styling */
+.section-title h2 {
+  color: var(--clr-accent1);
 }
 
-.footer-nav,
-.footer-social{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  
-}
-.footer-nav a {
-  padding:0.75em;
-  text-decoration: none;
-
+.tour-section {
+  background-color: var(--clr-light);
+  background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L12 8L20 10L12 12L10 20L8 12L0 10L8 8L10 0Z" fill="%23069db5" fill-opacity="0.05"/></svg>');
 }
 
-.footer-nav a:hover{
-  text-decoration: underline;
+/* Winter-specific location card styling */
+.location-card {
+  border-radius: var(--border-radius-large);
+  overflow: hidden;
 }
 
-.footer-social{
-  list-style: none;
-
+.location-overlay {
+  background: linear-gradient(to top, rgba(6, 157, 181, 0.9) 0%, rgba(6, 157, 181, 0) 100%);
 }
-.some-link{
-  display: inline-block;
- margin-bottom: 5px;
-}
-.some-icon{
-  width: 30px;
 
+/* Winter-specific footer styling */
+footer {
+  background-color: var(--clr-light);
+  background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 0L11.7 8.3L20 10L11.7 11.7L10 20L8.3 11.7L0 10L8.3 8.3L10 0Z" fill="%23069db5" fill-opacity="0.05"/></svg>');
+}
+
+/* Headline subtitle for winter */
+.headline-subtitle {
+  display: block;
+  font-size: 0.4em;
+  font-weight: 400;
+  letter-spacing: 4px;
+  margin-top: 0.5em;
+  text-transform: uppercase;
+  color: #a0e6ff;
+}
+
+/* Add snowfall animation to winter theme */
+@keyframes snowfall {
+  0% {
+    opacity: 0;
+    transform: translateY(0) rotate(0deg);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+.parallax::after {
+  content: '❄';
+  position: fixed;
+  font-size: 20px;
+  color: white;
+  text-shadow: 0 0 5px rgba(255,255,255,0.8);
+  animation: snowfall 10s linear infinite;
+  pointer-events: none;
+  z-index: 3;
+  left: 10%;
+}
+
+.parallax::before {
+  content: '❄';
+  position: fixed;
+  font-size: 14px;
+  color: white;
+  text-shadow: 0 0 5px rgba(255,255,255,0.8);
+  animation: snowfall 14s linear infinite 2s;
+  pointer-events: none;
+  z-index: 3;
+  left: 30%;
 }
