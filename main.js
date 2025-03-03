@@ -55,16 +55,16 @@ function setSeasonalBackgrounds() {
     // Set background based on current season stylesheet
     if (currentStyle === 'styles.css') {
         // Summer
-        mobileParallax.style.backgroundImage = "url('images/summermain-mobile.jpg')";
+        mobileParallax.style.backgroundImage = "url('images/summermain.jpg')";
     } else if (currentStyle === 'fall.css') {
         // Fall
-        mobileParallax.style.backgroundImage = "url('images/fallmain-mobile.jpg')";
+        mobileParallax.style.backgroundImage = "url('images/fallmain.jpg')";
     } else if (currentStyle === 'winter.css') {
         // Winter
-        mobileParallax.style.backgroundImage = "url('images/wintermain-mobile.jpg')";
+        mobileParallax.style.backgroundImage = "url('images/wintermain2.jpg')";
     } else if (currentStyle === 'spring.css') {
         // Spring
-        mobileParallax.style.backgroundImage = "url('images/turku-ilmasta-kuva-seilo-ristimaki-mobile.jpg')";
+        mobileParallax.style.backgroundImage = "url('images/turku-ilmasta-kuva-seilo-ristimaki.jpg')";
     }
 }
 

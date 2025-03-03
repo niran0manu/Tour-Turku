@@ -16,7 +16,7 @@
 .parallax{
   width: 100%;
   height: 150vh;  
-  background:url(images/summermain.jpg);
+  background:url("images/summermain.jpg");
   background-size: cover;
   position: relative;
 }
@@ -39,7 +39,7 @@
 }
 
 .mask{
-  mask: url(imagessummermask.png);
+  mask: url("images/summermask.png");
   mask-size:cover;
   -webkit-mask:url("images/summermask.png");
   -webkit-mask-size: cover;
