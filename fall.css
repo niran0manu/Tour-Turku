@@ -51,6 +51,7 @@
 /* Fall-specific button styles */
 .btn {
   background-color: var(--clr-strong);
+  color: var(--clr-text);
 }
 
 .btn:hover {

@@ -53,6 +53,9 @@
 .btn {
   background-color: var(--clr-strong);
   border-radius: var(--border-radius-small);
+  color: var(--clr-text);
+
+  
 }
 
 .btn:hover {

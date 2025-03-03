@@ -9,6 +9,7 @@
     <title>Turku Tours - Experience Finland in All Seasons</title>
     <meta name="description" content="Discover Turku, Finland's oldest city, with seasonal tours and activities for all travelers.">
     <script src="main.js" defer></script>
+    
 </head>
 <body>
   <header>
@@ -18,7 +19,7 @@
                 <img class="logo" src="./images/logo-kissmyturku.svg" alt="Turku Tours Logo">
             </div>
             
-            <!-- Add seasons switcher between logo and hamburger menu for mobile -->
+            <!-- Mobile seasons switcher - now with proper display control -->
             <div class="seasons-mobile">
                 <div class="seasons-container-mobile">
                     <button class="summer mode-mobile active" aria-label="Summer Theme" onclick="setActiveSeason('summer'); swapStyles('styles.css')">☀️</button>
@@ -51,18 +52,19 @@
                     <a href="#contact">Contact</a>
                 </li>
                 
-                <!-- Keep the original seasons for desktop view -->
-                <li class="seasons">
-                    <span class="seasons-label">Seasons:</span>
-                    <div class="seasons-container">
-                        <button class="summer mode active" aria-label="Summer Theme" onclick="setActiveSeason('summer'); swapStyles('styles.css')">☀️</button>
-                        <button class="fall mode" aria-label="Fall Theme" onclick="setActiveSeason('fall'); swapStyles('fall.css')">🍂</button>
-                        <button class="winter mode" aria-label="Winter Theme" onclick="setActiveSeason('winter'); swapStyles('winter.css')">❄️</button>
-                        <button class="spring mode" aria-label="Spring Theme" onclick="setActiveSeason('spring'); swapStyles('spring.css')">🌸</button>
-                    </div>
-                </li>
+                <!-- Desktop seasons - now with proper display control -->
+               
             </ul>
         </nav>
+        <li class="seasons">
+            
+            <div class="seasons-container">
+                <button class="summer mode active" aria-label="Summer Theme" onclick="setActiveSeason('summer'); swapStyles('styles.css')">☀️</button>
+                <button class="fall mode" aria-label="Fall Theme" onclick="setActiveSeason('fall'); swapStyles('fall.css')">🍂</button>
+                <button class="winter mode" aria-label="Winter Theme" onclick="setActiveSeason('winter'); swapStyles('winter.css')">❄️</button>
+                <button class="spring mode" aria-label="Spring Theme" onclick="setActiveSeason('spring'); swapStyles('spring.css')">🌸</button>
+            </div>
+        </li>
     </div>
 
     <!-- Landing image with parallax effect -->
@@ -73,12 +75,14 @@
   </div>
 </div>
 
-<!-- Mobile-only Parallax (new) -->
-<div id="home-mobile" class="parallax mobile-parallax" aria-label="Turku city view"></div>  <div class="mask-mobile">
+<!-- Mobile-only Parallax (fixed closing tag) -->
+<div id="home-mobile" class="parallax mobile-parallax" aria-label="Turku city view">
+  <div class="mask-mobile">
       <h1 class="headline-mobile">Experience Turku<br><span class="headline-subtitle">In Every Season</span></h1>
   </div>
 </div>
 </header>
+    <!-- Rest of the HTML remains unchanged -->
     <main>
         <!-- Alert/Info Section -->
         <section class="section">

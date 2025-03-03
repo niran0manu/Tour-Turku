@@ -185,6 +185,42 @@ p {
   gap: var(--gap, 2em);
 }
 
+ /* Make the primary header a flex container with evenly spaced items */
+ .primary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Make sure the nav is taking appropriate space */
+.primary-header nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Style the logo container */
+.logo-container {
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+
+/* Style the seasons container for desktop layout */
+.seasons {
+  flex: 0 0 auto;
+  list-style: none;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Remove any default margins on the navigation list */
+.primary-navigation {
+  margin: 0;
+  padding: 0;
+}
+
 .primary-header {
   align-items: center;
   justify-content: space-between;
@@ -255,7 +291,7 @@ p {
   display: flex;
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 50px;
-  padding: 0.25rem;
+  
 }
 
 .mode {
@@ -390,13 +426,19 @@ p {
     display: none;
   }
   
+  
   .mobile-parallax {
     display: block;
   }
-  
+  .seasons {
+    display: none; /* Hide desktop seasons on mobile */
+}
   .headline-mobile {
     font-size: clamp(1.8rem, 5vw, 2.2rem);
   }
+  .mobile-nav-toggle {
+    display: block;
+}
   
   /* Very small screens */
   @media (max-width: 480px) {
@@ -713,6 +755,11 @@ footer {
   .section {
     width: 95%;
     padding: var(--spacing-m) 0;
+  }
+}
+@media (min-width: 768px) {
+  .seasons-mobile {
+      display: none; /* Hide mobile seasons on desktop */
   }
 }
 

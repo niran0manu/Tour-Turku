@@ -54,6 +54,8 @@
 .btn {
   background-color: var(--clr-strong);
   border-radius: 50px;
+  color: var(--clr-text);
+
 }
 
 .btn:hover {

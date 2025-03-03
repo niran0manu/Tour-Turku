@@ -118,6 +118,8 @@
   background-color: var(--clr-strong);
   position: relative;
   overflow: hidden;
+  color: var(--clr-text);
+
 }
 
 .btn:hover {
