@@ -399,6 +399,7 @@ p {
     background-color: transparent;
     background-image: url(images/menu.svg);
     background-repeat: no-repeat;
+    
     border: 0;
     width: 2rem;
     aspect-ratio: 1;

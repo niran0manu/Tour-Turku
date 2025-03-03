@@ -12,6 +12,7 @@
   --spring-gradient: linear-gradient(135deg, rgba(234, 46, 109, 0.85), rgba(142, 68, 173, 0.85));
 }
 
+
 /* Override background image for parallax section */
 .parallax{
   width: 100%;
