@@ -74,9 +74,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter)
+Your Name - [Niranjan](https://niran0manu.github.io/CV/)
 
-Project Link: [https://github.com/yourusername/turku-tours](https://github.com/yourusername/turku-tours)
+Project Link: [https://github.com/niran0manu/Tour-Turku/](https://github.com/niran0manu/Tour-Turku/)
 
 ---
 ⭐️ Star this repo if you find it helpful! 
