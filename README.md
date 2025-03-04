@@ -33,15 +33,15 @@ A responsive, season-themed website showcasing tourist attractions and guided ex
 
 ## 🚀 Live Demo
 
-[View Live Demo](#) <!-- Add your live demo link here -->
+[View Live Demo](#) <!-- I will add  live demo link here -->
 
 ## 📱 Screenshots
 
 ### Desktop View
-![Desktop View](./path-to-desktop-screenshot.jpg) <!-- Add actual screenshot paths -->
+![Desktop View](./path-to-desktop-screenshot.jpg) <!-- I will add  actual screenshot paths -->
 
 ### Mobile View
-![Mobile View](./path-to-mobile-screenshot.jpg) <!-- Add actual screenshot paths -->
+![Mobile View](./path-to-mobile-screenshot.jpg) <!-- I will add  actual screenshot paths -->
 
 ## 🎨 Seasonal Themes
 
@@ -51,26 +51,7 @@ The website features four distinct themes:
 - **Winter**: Cool, snow-themed design with winter activities
 - **Spring**: Fresh and light design with spring blooms
 
-## 🔧 Installation & Setup
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/turku-tours.git
-```
-
-2. Navigate to the project directory:
-```bash
-cd turku-tours
-```
-
-3. Open `index.html` in your preferred browser or use a local server:
-```bash
-# Using Python
-python -m http.server 8000
-
-# Using Node.js
-npx serve
-```
+``
 
 ## 💡 Usage
 
@@ -80,15 +61,6 @@ npx serve
 - Click on tour cards to see hover animations
 - Navigate through different sections using the menu
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## 📄 License
 
