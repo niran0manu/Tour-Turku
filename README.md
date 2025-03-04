@@ -33,7 +33,7 @@ A responsive, season-themed website showcasing tourist attractions and guided ex
 
 ## 🚀 Live Demo
 
-[View Live Demo](#) <!-- I will add  live demo link here -->
+[View Live Demo](https://benevolent-praline-07fe0f.netlify.app/) <!-- I will add  live demo link here -->
 
 ## 📱 Screenshots
 
