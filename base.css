@@ -268,7 +268,6 @@ p {
   padding: 0.75em 1.5em;
   margin: 0;
   background-color: var(--clr-strong);
-  border-radius: var(--border-radius-large);
   display: flex;
   align-items: center;
   box-shadow: var(--box-shadow-md);
@@ -400,16 +399,21 @@ p {
     background-image: url(images/menu.svg);
     background-repeat: no-repeat;
     
+
+
+
     border: 0;
     width: 2rem;
     aspect-ratio: 1;
-    top: 2rem;
+    top: 2.5rem;
     right: 1.5rem;
+    filter: brightness(0) invert(1);
   }
 
   .mobile-nav-toggle[aria-expanded="true"] {
     background-image: url(images/x.svg);
   }
+  
   
   .seasons-container {
     margin: 1rem 0;
